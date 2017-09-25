@@ -20,7 +20,7 @@ class Room extends Model
         'full_description_ru',
         'full_description_ua',
         'full_description_en',
-        'people_quontaty',
+        'people_quantity',
         'img'
     ];
 

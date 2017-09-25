@@ -30,7 +30,7 @@
               <p>Полное  описание на Английском языке</p>
                 <textarea name="full_description_en" cols="2000" maxlength="2000" id="addroom"></textarea>
             <p>Количество людей</p>
-            <input type="text" name="people_quontaty">
+            <input type="text" name="people_quantity">
             <p>Основное фото</p>
             <input type="file" name="img" multiple>
             

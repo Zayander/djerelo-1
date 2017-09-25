@@ -11,12 +11,9 @@
 |
 */
 Auth::routes();
-Route::get('/', function () {
-    return view('welcome');
-});
-
-//Auth::routes();
-
+Route::get('/', function () { return view('welcome'); });
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('rooms', 'Admin\RoomController@index')->name('rooms');
-Route::post('rooms/add', 'Admin\RoomController@addRoom')->name('addroom');
+Route::get('rooms/index', function (){ return view('admin/addRoom');})->name('formroom');
+Route::post('rooms/index/add', 'Admin\RoomController@addRoom')->name('addroom');
+Route::match(['get', 'post'], 'rooms/index/edit', ['uses' => 'Admin\RoomController@editRoom', 'as' => 'edit']);
